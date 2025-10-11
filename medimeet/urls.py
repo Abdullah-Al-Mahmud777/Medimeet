@@ -1,12 +1,13 @@
+# medimeet/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Welcome to Medimeet!")
+    return HttpResponse("<h1>Welcome, you are logged in!</h1>")
 
 urlpatterns = [
-    path('', home, name='home'),  # <-- এটা নতুন যোগ
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
+   
+    path('', home, name='home'),
 ]
