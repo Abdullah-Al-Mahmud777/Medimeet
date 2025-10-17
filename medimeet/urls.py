@@ -3,5 +3,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  # শুধু home.urls include করো একবার
+    path('', include('home.urls')),
 ]

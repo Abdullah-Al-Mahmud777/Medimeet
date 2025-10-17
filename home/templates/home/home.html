@@ -8,26 +8,179 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">    
 </head>
 <body>
+<style>
+
+.cards-section .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.cards-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.cards-section .btn-primary {
+    background-color: #0d6efd;
+    border: none;
+}
+
+.cards-section .btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+body 
+{ background-color: lightblue;
+ }
+
+</style>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0d6efd;">
   <div class="container">
-    <a class="navbar-brand" href="#">MEEDIMEET</a>
+    <a class="navbar-brand text-white" href="#">MEEDIMEET</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" 
+        style="border-color: white;">
+      <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml;charset=utf8,<svg viewBox=&quot;0 0 30 30&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path stroke=&quot;rgba(255, 255, 255, 1)&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M4 7h22M4 15h22M4 23h22&quot;/></svg>');"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
-        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">login</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Registration</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!--hero section-->
+<section class="hero">
+  <div class="hero-content container text-center">
+    <img src="https://source.unsplash.com/300x200/?business" class="card-img-top" alt="Service 4">
+    <h1 class="display-5fw-bold text-white">Welcome to MEEDIMEET</h1>
+    <p class="lead text-white mb-4">Your journey starts here</p>
+    <a href="#get-started" class="btn btn-primary btn-lg">Get Started</a>
+  </div>
+</section>
+
+<section class="cards-section py-5" id="services">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+      
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="https://source.unsplash.com/300x200/?tech" class="card-img-top" alt="Service 1">
+          <div class="card-body">
+            <h5 class="card-title">Service One</h5>
+            <p class="card-text">Description for service one goes here.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="https://source.unsplash.com/300x200/?code" class="card-img-top" alt="Service 2">
+          <div class="card-body">
+            <h5 class="card-title">Service Two</h5>
+            <p class="card-text">Description for service two goes here.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="https://source.unsplash.com/300x200/?design" class="card-img-top" alt="Service 3">
+          <div class="card-body">
+            <h5 class="card-title">Service Three</h5>
+            <p class="card-text">Description for service three goes here.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="https://source.unsplash.com/300x200/?business" class="card-img-top" alt="Service 4">
+          <div class="card-body">
+            <h5 class="card-title">Service Four</h5>
+            <p class="card-text">Description for service four goes here.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
+      
+      <!-- About -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">MEEDIMEET</h5>
+        <p>We provide quality services to help you succeed. Join us and start your journey today.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Quick Links</h5>
+        <p><a href="#" class="text-white text-decoration-none">Home</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Services</a></p>
+        <p><a href="#" class="text-white text-decoration-none">About</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+        <p><i class="bi bi-house-fill me-2"></i>Bangladesh</p>
+        <p><i class="bi bi-envelope-fill me-2"></i>info@meedimeet.com</p>
+        <p><i class="bi bi-telephone-fill me-2"></i>01517681926</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Follow Us</h5>
+        <a href="#" class="text-white me-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-4"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="text-white me-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white me-4"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+
+    <hr class="mb-4">
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2025 MEEDIMEET. All Rights Reserved.</p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <p>Developed by Abdullah-Al-Mahmud</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
