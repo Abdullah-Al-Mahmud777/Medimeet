@@ -1,0 +1,186 @@
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Hind Siliguri', sans-serif; }
+    .accordion-button::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23666666' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-blue-600">🏥 HealthCare</h1>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">সার্ভিস</a>
+          <a href="#packages" class="text-gray-700 hover:text-blue-600 font-medium">প্যাকেজ</a>
+          <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
+          <a href="tel:16678" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700">🚑 16678</a>
+        </div>
+        <button class="md:hidden" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">ঘরে বসে ডাক্তার, টেস্ট, ওষুধ – সব!</h1>
+      <p class="text-lg mb-8">১ ক্লিকে বুকিং | ২৪/৭ সাপোর্ট | ১০০% সিকিউর</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#booking" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 shadow-lg">
+          📅 এখনই বুক করুন
+        </a>
+        <a href="#video" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-blue-600">
+          📹 ভিডিও কনসালটেশন
+        </a>
+      </div>
+      <div class="mt-10">
+        <video class="rounded-xl shadow-2xl mx-auto w-full max-w-2xl" autoplay loop muted playsinline>
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-doctor-taking-notes-while-talking-to-patient-2964-small.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features: Tabs + Accordion -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">আমাদের সার্ভিসসমূহ</h2>
+
+      <!-- Desktop Tabs -->
+      <div class="hidden md:block">
+        <div class="flex flex-wrap justify-center gap-2 mb-8" role="tablist">
+          <button class="tab-btn active px-6 py-3 rounded-full bg-blue-600 text-white" data-tab="booking">বুকিং</button>
+          <button class="tab-btn px-6 py-3 rounded-full bg-gray-200" data-tab="consult">কনসাল্ট</button>
+          <button class="tab-btn px-6 py-3 rounded-full bg-gray-200" data-tab="diagnostic">ডায়াগনস্টিক</button>
+          <button class="tab-btn px-6 py-3 rounded-full bg-gray-200" data-tab="emergency">ইমার্জেন্সি</button>
+          <button class="tab-btn px-6 py-3 rounded-full bg-gray-200" data-tab="pharmacy">ফার্মেসি</button>
+        </div>
+
+        <div id="tab-content" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Content will be injected by JS -->
+        </div>
+      </div>
+
+      <!-- Mobile Accordion -->
+      <div class="md:hidden">
+        <div class="space-y-4">
+          <!-- Booking -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <button class="accordion-button w-full px-6 py-4 text-left font-bold text-blue-600 flex justify-between items-center">
+              📅 বুকিং ও শিডিউল
+              <span>▼</span>
+            </button>
+            <div class="accordion-content hidden px-6 pb-4 space-y-4">
+              <div class="flex items-start gap-3"><span class="text-2xl">📅</span><div><b>ইনস্ট্যান্ট ডাক্তার বুকিং</b><p class="text-sm text-gray-600">১ ক্লিকে ডাক্তার, তারিখ, সময় বুক।</p></div></div>
+              <div class="flex items-start gap-3"><span class="text-2xl">⏰</span><div><b>24/7 অনলাইন বুকিং</b><p class="text-sm text-gray-600">রাত-দিন বুকিং, কোনো অপেক্ষা নেই।</p></div></div>
+              <div class="flex items-start gap-3"><span class="text-2xl">✅</span><div><b>স্মার্ট স্লট</b><p class="text-sm text-gray-600">রিয়েল-টাইম স্লট, ওভারবুকিং নেই।</p></div></div>
+            </div>
+          </div>
+          <!-- Repeat for other categories -->
+          <!-- (Consult, Diagnostic, etc.) -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div><i class="fas fa-shield-alt text-4xl text-green-600"></i><p class="mt-2 font-bold">ISO 27001</p></div>
+        <div><i class="fas fa-certificate text-4xl text-blue-600"></i><p class="mt-2 font-bold">DGDA Approved</p></div>
+        <div><i class="fas fa-users text-4xl text-teal-600"></i><p class="mt-2 font-bold">৫০,০০০+ রোগী</p></div>
+        <div><i class="fas fa-undo text-4xl text-red-600"></i><p class="mt-2 font-bold">১০০% রিফান্ড</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">রোগীর মতামত</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <p class="italic">"ঘরে বসে ডাক্তার দেখালাম, রিপোর্ট ৬ ঘণ্টায় পেলাম!"</p>
+          <div class="flex items-center mt-4">
+            <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div class="ml-3"><b>রহিমা বেগম</b><p class="text-sm text-gray-600">ঢাকা</p></div>
+          </div>
+        </div>
+        <!-- Add 2 more -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold mb-4">স্বাস্থ্যসেবা আপনার হাতের মুঠোয়</h3>
+      <a href="#booking" class="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 inline-block">
+        এখনই শুরু করুন
+      </a>
+      <p class="mt-8 text-sm">© 2025 HealthCare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS for Tabs & Accordion -->
+  <script>
+    // Tab Data
+    const tabs = {
+      booking: [
+        {icon: "📅", title: "ইনস্ট্যান্ট ডাক্তার বুকিং", desc: "১ ক্লিকে ডাক্তার, তারিখ, সময় বুক।"},
+        {icon: "⏰", title: "24/7 অনলাইন বুকিং", desc: "রাত-দিন বুকিং, কোনো অপেক্ষা নেই।"},
+        {icon: "✅", title: "স্মার্ট স্লট", desc: "রিয়েল-টাইম স্লট, ওভারবুকিং নেই।"},
+        {icon: "🔄", title: "রিশিডিউল/ক্যানসেল", desc: "১ ক্লিকে পরিবর্তন বা বাতিল।"},
+        {icon: "👨‍👩‍👧‍👦", title: "ফ্যামিলি বুকিং", desc: "এক অ্যাকাউন্টে পরিবারের সবাই।"}
+      ],
+      consult: [
+        {icon: "📹", title: "ভিডিও কনসালটেশন", desc: "ঘরে বসে ডাক্তারের সাথে ভিডিও কল।"},
+        {icon: "💬", title: "চ্যাট উইথ ডাক্তার", desc: "টেক্সট চ্যাট, ছবি/রিপোর্ট শেয়ার।"}
+      ],
+      // Add others...
+    };
+
+    // Render Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.add('bg-gray-200'));
+        btn.classList.add('active', 'bg-blue-600', 'text-white');
+        btn.classList.remove('bg-gray-200');
+
+        const tab = btn.dataset.tab;
+        const content = tabs[tab].map(item => `
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+            <div class="text-4xl mb-3">${item.icon}</div>
+            <h3 class="font-bold text-lg">${item.title}</h3>
+            <p class="text-sm text-gray-600 mt-1">${item.desc}</p>
+          </div>
+        `).join('');
+        document.getElementById('tab-content').innerHTML = content;
+      });
+    });
+
+    // Trigger first tab
+    document.querySelector('.tab-btn').click();
+
+    // Accordion
+    document.querySelectorAll('.accordion-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle('hidden');
+        btn.querySelector('span').textContent = content.classList.contains('hidden') ? '▼' : '▲';
+      });
+    });
+  </script>
+</body>
+</html>
