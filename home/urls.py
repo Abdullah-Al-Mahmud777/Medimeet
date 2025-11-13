@@ -3,7 +3,7 @@ from . import views
 from django.contrib.auth import views as auth_views  
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.home, name='home'),  # root of the app
     path('login/', auth_views.LoginView.as_view(template_name='home/login.html'), name='login'),
     path('register/', views.register_view, name='register'),  
     path('doctor-search/', views.doctor_search, name='doctor_search'),
