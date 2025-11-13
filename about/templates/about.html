@@ -1,1 +1,144 @@
-<h1>hello bangladesh</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আমাদের সম্পর্কে | MEEDIMEET</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { hind: ['Hind Siliguri', 'sans-serif'] },
+          colors: { primary: '#0d6efd' }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-hind bg-gradient-to-b from-blue-50 to-white text-gray-800">
+
+  <!-- Header -->
+  <nav class="fixed top-0 w-full bg-primary text-white shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="{% url 'home' %}" class="text-2xl font-bold tracking-tight">MEEDIMEET</a>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="{% url 'home' %}" class="hover:text-blue-200 transition duration-200">হোম</a>
+          <a href="{% url 'about' %}" class="hover:text-blue-200 transition duration-200">আমাদের সম্পর্কে</a>
+          <a href="{% url 'login' %}" class="hover:text-blue-200 transition duration-200">লগইন</a>
+          <a href="{% url 'register' %}" class="bg-white text-primary px-5 py-2 rounded-full font-bold hover:bg-gray-100 transition">রেজিস্টার</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden text-white">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden bg-primary hidden px-4 pt-2 pb-4 space-y-1">
+      <a href="{% url 'home' %}" class="block py-2 px-3 hover:bg-blue-700 rounded transition">হোম</a>
+      <a href="{% url 'about' %}" class="block py-2 px-3 hover:bg-blue-700 rounded transition">আমাদের সম্পর্কে</a>
+      <a href="{% url 'login' %}" class="block py-2 px-3 hover:bg-blue-700 rounded transition">লগইন</a>
+      <a href="{% url 'register' %}" class="block py-3 px-3 bg-white text-primary rounded-full text-center font-bold hover:bg-gray-100 transition">রেজিস্টার</a>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-primary text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            আমাদের সম্পর্কে <br><span class="text-blue-200">MEEDIMEET</span>
+          </h1>
+          <p class="text-lg text-blue-100">
+            MediMeet হলো একটি ২৪/৭ স্বাস্থ্যসেবা প্ল্যাটফর্ম। ডাক্তার বুকিং, ভিডিও কনসালটেশন, ল্যাব টেস্ট, ওষুধ ডেলিভারি — সব এক জায়গায়।
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img src="{% static 'images/about-hero.png' %}" alt="আমাদের সম্পর্কে" class="w-full max-w-md rounded-2xl shadow-2xl">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">আমাদের মিশন ও ভিসন </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="font-bold text-xl mb-2">আমাদের মিশন</h3>
+            <p>সবার জন্য সহজ, দ্রুত এবং নির্ভরযোগ্য স্বাস্থ্যসেবা নিশ্চিত করা।</p>
+          </div>
+          <div class="p-6 bg-blue-50 rounded-xl shadow hover:shadow-lg transition">
+            <h3 class="font-bold text-xl mb-2">আমাদের ভিসন </h3>
+            <p>ডিজিটাল প্রযুক্তির মাধ্যমে স্বাস্থ্যসেবাকে সবার নাগালের মধ্যে আনা।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">আমাদের গল্প</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">MediMeet শুরু হয়েছিল আমাদের স্বপ্ন দিয়ে — একটি ডিজিটাল প্ল্যাটফর্ম যেখানে সবাই সহজে ডাক্তার খুঁজতে এবং স্বাস্থ্যসেবা নিতে পারবে। আমরা শুরু করেছি কয়েকজন প্রোগ্রামার এবং ডিজাইনার হিসেবে, কিন্তু এখন আমাদের প্ল্যাটফর্মে ১০,০০০+ ডাক্তার এবং ৫০০+ হাসপাতাল যুক্ত।</p>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">আমাদের টিম</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Team Member -->
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <img src="{% static 'images/team-placeholder.png' %}" alt="Maruf Hossain" class="w-24 h-24 mx-auto rounded-full mb-4">
+            <h3 class="font-bold text-lg">Maruf Hossain</h3>
+            <p class="text-gray-600 text-sm">Frontend & Backend Developer</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <img src="{% static 'images/team-placeholder.png' %}" alt="Abdullah-Al-Mahmud" class="w-24 h-24 mx-auto rounded-full mb-4">
+            <h3 class="font-bold text-lg">Abdullah-Al-Mahmud</h3>
+            <p class="text-gray-600 text-sm">UI/UX Designer & Backend</p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <img src="{% static 'images/team-placeholder.png' %}" alt="Future Member" class="w-24 h-24 mx-auto rounded-full mb-4">
+            <h3 class="font-bold text-lg">Future Member</h3>
+            <p class="text-gray-600 text-sm">Coming Soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-white text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">আজই যোগ দিন!</h2>
+      <p class="text-blue-100 mb-8">MediMeet এ সাইন আপ করে স্বাস্থ্যসেবা নিন সহজে ও দ্রুত।</p>
+      <a href="{% url 'register' %}" class="bg-white text-primary px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition">ফ্রি রেজিস্টার</a>
+    </section>
+
+  </main>
+
+  <!-- Footer (reuse homepage footer) -->
+  {% include 'home/footer.html' %}
+
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', function (e) {
+      const navbar = document.querySelector('nav');
+      const menu = document.getElementById('mobileMenu');
+      if (!navbar.contains(e.target)) { menu.classList.add('hidden'); }
+    });
+  </script>
+
+</body>
+</html>
