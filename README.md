@@ -1,6 +1,6 @@
-# MEEDIMEET
+# MEDIMEET
 
-MEEDIMEET is a 24/7 healthcare service platform that makes medical services accessible from anywhere. Users can book doctors, schedule video consultations, order lab tests, and get medicines delivered—all from a single platform.
+MEDIMEET is a 24/7 healthcare service platform that makes medical services accessible from anywhere. Users can book doctors, schedule video consultations, order lab tests, and get medicines delivered—all from a single platform.
 
 ---
 
@@ -29,8 +29,8 @@ MEEDIMEET is a 24/7 healthcare service platform that makes medical services acce
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/MEEDIMEET.git
-cd MEEDIMEET
+git clone https://github.com/zZOKofficial/MEDIMEET.git
+cd MEDIMEET
 ````
 
 2. Create and activate a virtual environment:
@@ -90,7 +90,7 @@ This project is licensed under the GPL-3.0 license.
 
 ---
 
-**Contact:** [info@meedimeet.com](mailto:info@meedimeet.com)
+**Contact:** [info@medimeet.com](mailto:info@medimeet.com)
 
 ```
 
